@@ -14,6 +14,7 @@ namespace Puzzles.Controllers
     {
         private PuzzlesContext db = new PuzzlesContext();
 
+        
         // GET: PuzzleProducts
         public ActionResult Index()
         {
