@@ -274,7 +274,7 @@
     <Content Include="Views\PuzzleProducts\Delete.cshtml" />
     <Content Include="Views\PuzzleProducts\Details.cshtml" />
     <Content Include="Views\PuzzleProducts\Edit.cshtml" />
-    <Content Include="Views\PuzzleProducts\Start.cshtml" />
+    <Content Include="Views\PuzzleProducts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

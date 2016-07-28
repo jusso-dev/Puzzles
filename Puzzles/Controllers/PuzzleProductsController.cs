@@ -16,7 +16,7 @@ namespace Puzzles.Controllers
 
         
         // GET: PuzzleProducts
-        public ActionResult Start()
+        public ActionResult Index()
         {
             return View(db.PuzzleProducts.ToList());
         }
