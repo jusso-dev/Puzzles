@@ -14,8 +14,6 @@ namespace Puzzles.Models
         [DisplayName("Type of Puzzle")]
         public string TypeOfPuzzle { get; set; }
         
-        public string Catagory { get; set; }
-        
-        public float Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

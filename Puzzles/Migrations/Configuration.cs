@@ -9,7 +9,7 @@ namespace Puzzles.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Puzzles.Models.PuzzlesContext";
         }
 
