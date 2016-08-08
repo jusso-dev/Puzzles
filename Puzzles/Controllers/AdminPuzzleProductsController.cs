@@ -10,12 +10,14 @@ using Puzzles.Models;
 
 namespace Puzzles.Controllers
 {
-    public class PuzzleProductsController : Controller
+    public class AdminPuzzleProductsController : Controller
     {
         private PuzzlesContext db = new PuzzlesContext();
 
-        
-        // GET: PuzzleProducts
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        // GET: AdminPuzzleProducts
+        // Admin page to manage Puzzles on the site
         public ActionResult Index()
         {
             return View(db.PuzzleProducts.ToList());
