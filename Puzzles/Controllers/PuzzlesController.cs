@@ -5,28 +5,30 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Puzzles.Models;
 
 namespace Puzzles.Controllers
 {
+    [RoutePrefix("api/PuzzleProducts")]
     public class PuzzlesController : ApiController
     {
         private PuzzlesContext db = new PuzzlesContext();
 
-        // GET: api/WebApiPuzzle
+        // GET: api/Puzzles
+        
         public IQueryable<PuzzleProducts> GetPuzzleProducts()
         {
             return db.PuzzleProducts;
         }
 
-        // GET: api/WebApiPuzzle/5
+        [HttpGet]
+        // GET: api/Puzzles/TypeOfPuzzle
         [ResponseType(typeof(PuzzleProducts))]
-        public IHttpActionResult GetPuzzleProducts(int id)
+        public IHttpActionResult GetPuzzleProducts(string TypeOfPuzzle)
         {
-            PuzzleProducts puzzleProducts = db.PuzzleProducts.Find(id);
+            PuzzleProducts puzzleProducts = db.PuzzleProducts.Find(TypeOfPuzzle);
             if (puzzleProducts == null)
             {
                 return NotFound();
@@ -34,7 +36,7 @@ namespace Puzzles.Controllers
 
             return Ok(puzzleProducts);
         }
-
+        
         // PUT: api/WebApiPuzzle/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPuzzleProducts(int id, PuzzleProducts puzzleProducts)
@@ -85,9 +87,11 @@ namespace Puzzles.Controllers
             return CreatedAtRoute("DefaultApi", new { id = puzzleProducts.ProductId }, puzzleProducts);
         }
 
+
         // DELETE: api/WebApiPuzzle/5
         [ResponseType(typeof(PuzzleProducts))]
-        public IHttpActionResult DeletePuzzleProducts(int id)
+        [System.Web.Http.HttpDelete]
+        public IHttpActionResult DeletepuzzleProducts(int id)
         {
             PuzzleProducts puzzleProducts = db.PuzzleProducts.Find(id);
             if (puzzleProducts == null)
