@@ -17,9 +17,9 @@ namespace Puzzles.Controllers
         private PuzzlesContext db = new PuzzlesContext();
 
         // GET: api/WebApiPuzzle
-        public IQueryable<PuzzleProducts> GetPuzzleProducts()
+        public List<PuzzleProducts> GetPuzzleProducts()
         {
-            return db.PuzzleProducts;
+            return db.PuzzleProducts.ToList();
         }
 
         // GET: api/WebApiPuzzle/5
