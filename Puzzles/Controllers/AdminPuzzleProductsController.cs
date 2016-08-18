@@ -14,8 +14,6 @@ namespace Puzzles.Controllers
     {
         private PuzzlesContext db = new PuzzlesContext();
 
-        [Authorize]
-        [ValidateAntiForgeryToken]
         // GET: AdminPuzzleProducts
         // Admin page to manage Puzzles on the site
         public ActionResult Index()
