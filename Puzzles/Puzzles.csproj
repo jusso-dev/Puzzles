@@ -217,7 +217,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\AdminPuzzleProductsController.cs" />
-    <Compile Include="Controllers\WebApiPuzzleController.cs" />
+    <Compile Include="Controllers\PuzzlesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

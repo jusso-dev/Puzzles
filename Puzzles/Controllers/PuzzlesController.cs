@@ -12,7 +12,7 @@ using Puzzles.Models;
 
 namespace Puzzles.Controllers
 {
-    public class WebApiPuzzleController : ApiController
+    public class PuzzlesController : ApiController
     {
         private PuzzlesContext db = new PuzzlesContext();
 
