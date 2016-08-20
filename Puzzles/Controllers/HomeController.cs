@@ -26,5 +26,10 @@ namespace Puzzles.Controllers
 
             return View();
         }
+
+        public ActionResult AjaxTest()
+        {
+            return View();
+        }
     }
 }
