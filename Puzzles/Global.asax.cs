@@ -21,7 +21,7 @@ namespace Puzzles
 
             // Manually installed WebAPI 2.2 after making an MVC project.
             // NEW way
-            
+
             // Default stuff
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

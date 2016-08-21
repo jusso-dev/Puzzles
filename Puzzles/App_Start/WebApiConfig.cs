@@ -17,6 +17,12 @@ namespace Puzzles
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            config.Routes.MapHttpRoute(
+                name: "DefaultCollection",
+                routeTemplate: "api/{controller}",
+                defaults: new { action = "GetAll" }
+            );
+
             // WebAPI when dealing with JSON & JavaScript!
             // Setup json serialization to serialize classes to camel (std. Json format)
             var formatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
