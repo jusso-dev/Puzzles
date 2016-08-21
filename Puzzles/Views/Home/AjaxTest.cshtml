@@ -1,33 +1,44 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
+    
+    <title>Ajax test page</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
 
-        $(document).ready(function () {
-            $("#button").click(function () {
-                $.get("http://localhost:49770/api/Puzzles", function (data) {
-                    alert("Ajax request was sent successfully to get all puzzles.");
-                });
+        $(document)
+            .ready(function() {
+                $("#button")
+                    .click(function() {
+                        $.ajax({
+                            url: "http://localhost:49770/api/Puzzles",
+                              dataType: "json"
+                            })
 
+                            .success(function(data) {
+                                try {
+
+                                    $('#div1').append(JSON.stringify(data));
+
+                                } catch (ex) {
+
+                                    alert("Ajax call failed " + ex.message);
+                                }
+                                
+                            });
+                    });
             });
-
-        });
-
     </script>
 </head>
 <body>
 
-    <ul>
-        <h3>List of puzzles below</h3>
+<h3>See results below</h3>
 
-        
+<div id="div1"></div>
 
-    </ul>
-
-    <div id="div1"></div>
-
-    <button id="button">Click to get all Puzzles!</button>
+<button id="button">Click to get all Puzzles!</button>
 
 </body>
 </html>
