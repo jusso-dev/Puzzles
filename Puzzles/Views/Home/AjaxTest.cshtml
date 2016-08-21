@@ -6,41 +6,25 @@
     <title>Ajax test page</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-
-        $(document)
-            .ready(function() {
-                $("#button")
-                    .click(function() {
-                        $.ajax({
-                            url: "http://localhost:49770/api/Puzzles",
-                              dataType: "json"
-                            })
-
-                            .success(function(data) {
-                                try {
-
-                                    $('#div1').append(JSON.stringify(data));
-
-                                } catch (ex) {
-
-                                    alert("Ajax call failed " + ex.message);
-                                }
-                                
-                            });
-                    });
-            });
-    </script>
+    <script src="~/Scripts/ajaxTesting.js"></script>
+    
+       
 </head>
 <body>
 
-<h3>See results below</h3>
+<button id="getPuzzleBtn">Get all Puzzles!</button>
 
-<div id="div1"></div>
+<button id="clearPuzzleBtn">Clear</button>
 
-<button id="button">Click to get all Puzzles!</button>
+    <h3>See results below</h3>
 
-</body>
+        <ul id="ul">
+
+
+        </ul>
+
+    </body>
+
 </html>
 
 
