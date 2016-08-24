@@ -7,28 +7,26 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <link href="~/Content/PuzzleAjaxGrid.css" rel="stylesheet" />
 
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container navbar-left">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Justin's Puzzles", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Justin's Puzzles", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
             </div>
-            
-            <div class="navbar-collapse collapse">
+
+            <div class="collapse navbar-collapse" id="nav-collaspe">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Products", "Products", "Products")</li>
-                    <li>@Html.ActionLink("AjaxTest", "AjaxTest", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Ajax", "AjaxTest", "Home")</li>
+                            <li>@Html.ActionLink("AdminPuzzles", "Index", "AdminPuzzleProducts")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

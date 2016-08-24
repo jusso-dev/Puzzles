@@ -13,13 +13,7 @@ namespace Puzzles.Controllers
         {
             return View();
         }
-
-        // GET: Products/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
+        
         [Authorize]
         // GET: Products/Create
         public ActionResult Create()

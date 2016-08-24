@@ -26,7 +26,7 @@ namespace Puzzles.Controllers
         [HttpGet]
         // GET: api/Puzzles/TypeOfPuzzle
         [ResponseType(typeof(PuzzleProducts))]
-        public IHttpActionResult GetPuzzleProducts(string TypeOfPuzzle)
+        public IHttpActionResult GetPuzzleProducts(string TypeOfPuzzle, int Price)
         {
             PuzzleProducts puzzleProducts = db.PuzzleProducts.Find(TypeOfPuzzle);
             if (puzzleProducts == null)

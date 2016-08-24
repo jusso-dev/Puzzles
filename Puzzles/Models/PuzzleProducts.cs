@@ -12,6 +12,8 @@ namespace Puzzles.Models
         [Key]
         public int ProductId { get; set; }
         [DisplayName("Type of Puzzle")]
+
+        [Required]
         public string TypeOfPuzzle { get; set; }
         
         public decimal Price { get; set; }

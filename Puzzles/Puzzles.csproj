@@ -247,11 +247,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\Hotsale-Custom-Paper-Jigsaw-Puzzle-with-Cheaper-Price.jpg" />
-    <Content Include="Content\images\jigsaw_puzzle_box.jpg" />
-    <Content Include="Content\images\Life_in_the_Smokies_box.jpg" />
+    <Content Include="Content\images\372165.jpg" />
+    <Content Include="Content\images\3d-silver-puzzle-wallpaper-14204-14678-hd-wallpapers.jpg" />
     <Content Include="Content\images\missing_puzzles_1920x1080.jpg" />
-    <Content Include="Content\images\venus-puzzle-3.jpg" />
+    <Content Include="Content\products.css" />
+    <Content Include="Content\Error.css" />
+    <Content Include="Content\slick-theme.css" />
+    <Content Include="Content\slick.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -270,6 +272,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Carolsel.js" />
     <Content Include="Scripts\ajaxTesting.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
